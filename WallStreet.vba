@@ -28,7 +28,7 @@ Sub WallStreet()
     curRow = 3
     
     stOpen = Cells(curRow - 1, 3).Value
-    totVol = curVol + Cells(curRow - 1, 7).Value
+    totVol = Cells(curRow - 1, 7).Value
         
     For curRow = 3 To (lRow + 1)
         curTick = Cells(curRow, 1).Value
@@ -56,7 +56,7 @@ Sub WallStreet()
             Cells(disRow, 12).Value = totVol
 
             stOpen = curOpen
-            totVol = 0
+            totVol = Cells(curRow, 7).Value
         Else
             disTick = curTick
             stClose = curClose
